@@ -2,13 +2,17 @@ export default class Component {
 
 	constructor({id = null} = {}) {
 
-		this.$el = document.getElementById(id)
+		this.$el = document.querySelector(id)
 
 	}
 
-
-	init() {
-		console.log(this.$el)
+	hide() {
+		this.$el.style.right = '-480px'
 	}
+
+	show() {
+		this.$el.style.right = '0px'
+	}
+
 
 }
